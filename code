@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int year;
+  bool t1= false;
+  bool t2= true;
+  cout << "What is the year? ";
+  cin >> year;
+  int yearlength = to_string(year).length();
+  if(yearlength == 4)
+  {
+    if(year % 4 == 0)
+    {
+      t1 = true;
+    }
+    if(year % 100 == 0 && year % 400 != 0)
+    {
+      t2 = false;
+    }
+  }
+  if(t1 == true && t2 == true)
+  {
+    cout << "It is a leap year";
+  }
+  else
+  {
+    cout << "It is not a leap year";
+  }
+  return 0;
+}
